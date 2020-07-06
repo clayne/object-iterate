@@ -40,7 +40,7 @@ jobs:
               run: perl -V
             - name: Prepare cpan
               run: |
-                cpan IO::Socket::SSL
+                cpan IO::Socket::SSL ExtUtils::MakeMaker
             - name: Install dependencies
               run: cpan .
             - name: Run tests
