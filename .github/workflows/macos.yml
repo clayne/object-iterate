@@ -20,9 +20,8 @@ jobs:
               run: brew install perl
             - name: Perl version check
               run: perl -V
-            - name: Install dependencies
-              run: cpan .
-            - name: Run tests
+            - name: Prepare cpan
               run: |
-                perl Makefile.PL
-                make test
+                cpan IO::Socket::SSL ExtUtils::MakeMaker
+            - name: Install
+              run: cpan .

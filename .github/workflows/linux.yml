@@ -41,7 +41,7 @@ jobs:
             - name: Prepare cpan
               run: |
                 cpan IO::Socket::SSL ExtUtils::MakeMaker
-            - name: Install dependencies
+            - name: Install
               run: cpan .
             - name: Run tests
               run: |
