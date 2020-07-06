@@ -3,6 +3,7 @@ open my $fh, '>:utf8', $ARGV[0]
 select( $fh );
 
 my $version = '5.020000';
+
 while( <DATA> ) {
 	if( m|\A###\s+\Q$version\E\s+///\s*(.*?)\s*///\s*(.*)| ) {
 		my $line = $] >= $version ? $1 : $2;
