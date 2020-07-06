@@ -14,6 +14,8 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+            - name: Platform check
+              run: uname -a
             - name: Set up Perl
               run: brew install perl
             - name: Perl version check

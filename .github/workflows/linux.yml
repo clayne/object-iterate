@@ -34,7 +34,9 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
-            - name: perl -V
+            - name: Platform check
+              run: uname -a
+            - name: Perl version check
               run: perl -V
             - name: Prepare cpan
               run: |
