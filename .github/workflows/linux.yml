@@ -44,7 +44,8 @@ jobs:
               run: perl -V
             - name: Prepare cpan
               run: |
-                cpan IO::Socket::SSL ExtUtils::MakeMaker
+                openssl version
+                cpan Net::SSLeay IO::Socket::SSL ExtUtils::MakeMaker
             - name: Install
               run: cpan .
             - name: Run tests
